@@ -10,34 +10,41 @@ namespace Methods
     {
         static void Main(string[] args)
         {
-            //Method
-            Add();
+            ////Method
+            //Add();
 
-            //Parametreli Methodlar
-            var result = Add2(20,30);
-            Console.WriteLine(result);
-
-
-            //defauld parametreli methodlar
-            var result2 = Add3(50);
-            Console.WriteLine(result2);
+            ////Parametreli Methodlar
+            //var result = Add2(20,30);
+            //Console.WriteLine(result);
 
 
-            //Ref Keyword
-            int number1 = 20;
-            int number2 = 100;
-            var result3 = Add4(ref number1, number2);
-            Console.WriteLine(result3);
-            Console.WriteLine(number1);
+            ////defauld parametreli methodlar
+            //var result2 = Add3(50);
+            //Console.WriteLine(result2);
 
 
-            //out Keyword
-            int number3;
-            int number4 = 200;
-            var result4 = Add5(out number3, number4);
-            Console.WriteLine(result4);
-            Console.WriteLine(number3);
+            ////Ref Keyword
+            //int number1 = 20;
+            //int number2 = 100;
+            //var result3 = Add4(ref number1, number2);
+            //Console.WriteLine(result3);
+            //Console.WriteLine(number1);
 
+
+            ////out Keyword
+            //int number3;
+            //int number4 = 200;
+            //var result4 = Add5(out number3, number4);
+            //Console.WriteLine(result4);
+            //Console.WriteLine(number3);
+
+
+            ////Method Overloading
+            //Console.WriteLine(Multifly(8, 4));
+            //Console.WriteLine(Multifly(8, 4,2));
+
+            //params
+            Console.WriteLine(Add6(1, 2, 3, 5, 4, 6, 8));
 
             Console.ReadLine(); 
         }
@@ -76,5 +83,22 @@ namespace Methods
             return number3 + number4;
 
         }
+
+        //Method Overloading
+        static int Multifly(int number1, int numnber2)
+        { return number1 * numnber2; }
+        static int Multifly(int number1, int numnber2,int number3)
+        {
+            return number1 * numnber2*number3; 
+        }
+
+        static int Add6(int number,params int[] numbers) //params'dan önce parametre  tanımlanır ise hesaplamada ilk değeri yer tutar
+                                                         // paramstan sonra parametre tanımlamaz
+        {
+            return numbers.Sum();
+        }
+
+
+
     }
 }
