@@ -16,10 +16,25 @@ namespace Loops
             //DoWhileLoop();
             //ForEachLoop();
 
-            Console.ReadLine();
 
+
+            Console.ReadLine();
+        }
+
+        private static bool IsPrimeNumber(int number)
+        {
+            bool result = true;
+            for (int i = 2; i < number-1; i++)
+            {
+                if (number%i==0)
+                {
+                    result = false;
+                }
+            }
+            return result;
 
         }
+
 
         private static void ForEachLoop()
         {
