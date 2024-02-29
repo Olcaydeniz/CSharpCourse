@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +17,14 @@ namespace Loops
             //DoWhileLoop();
             //ForEachLoop();
 
-
+            if(IsPrimeNumber(6))
+            {
+                Console.WriteLine("This is a prime number");
+            }
+            else 
+            {
+                Console.WriteLine("This is not a prime number");
+            }
 
             Console.ReadLine();
         }
@@ -29,6 +37,7 @@ namespace Loops
                 if (number%i==0)
                 {
                     result = false;
+                    i = number;
                 }
             }
             return result;
