@@ -6,13 +6,13 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intarfaces
+namespace Interfaces
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //IntarfacesIntro();
+            //InterfacesIntro();
             //Demo();
 
             ICustomerDal[] customerDals = new ICustomerDal[3]
@@ -39,7 +39,7 @@ namespace Intarfaces
             customerManager.Add(new OracleCustomerDal());
         }
 
-        private static void IntarfacesIntro()
+        private static void InterfacesIntro()
         {
             PersonManager manager = new PersonManager();
             Customer customer = new Customer
